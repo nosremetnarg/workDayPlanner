@@ -52,6 +52,11 @@ header  {
   justify-content: center;
   align-items: center;
 }
+#currentDay {
+  color: black;
+  background-color: white;
+  font-family: monospace
+}
 
 .past {
   background-color: #d3d3d3;
