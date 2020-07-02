@@ -12,13 +12,21 @@ textarea{
   border-left: 1px solid black;
   padding: 10px;
 }
+header  {
+  margin-bottom: 20px;
+  border-bottom: 10px solid black;
+  
+}
+/* .container {
+  border-top: 10px solid blue;
+} */
 
 .jumbotron {
   text-align: center;
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  
 }
 
 .description{
@@ -40,6 +48,9 @@ textarea{
   background-color: rgba(255, 255, 255, 0.918);
   color: #000000;
   border-top: 1px dashed #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .past {
@@ -69,11 +80,15 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
-
-
 .middle {
   background-color: rgba(183, 183, 183, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button {
   background-color: rgba(39, 212, 105, 0.616);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
