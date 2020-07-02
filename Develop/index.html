@@ -21,6 +21,7 @@
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
+    <p id="currentHour"></p>
   </header>
   <main class="flex-column">
     <div class="container">
@@ -29,22 +30,22 @@
           9a.m.
         </div>
         <div class="col-6 middle task-drop task-drag">
-          <textarea id="modalTaskDescription" class="form-control task-input" placeholder="Task"></textarea>
+          <input id="row9" class="form-control task-input" placeholder="Enter Task Here"></input>
         </div>
-        <div class="col button">
-          <button type="button" class="btn btn-secondary"><span class="oi oi-box"></span></button>
+        <div class="col button btn btn-secondary" data-hour=9>
+          <!-- <button type="button" class="btn btn-secondary" data-hour=9><span class="oi oi-box"></span></button> -->
+          <img src="https://img.icons8.com/ios-glyphs/30/000000/save.png" alt="save"/>
         </div>
       </div>
       <div class="row">
         <div class="col hour">
           10a.m.
-
         </div>
         <div class="col-6 middle task-drop task-drag">
-            <textarea id="modalTaskDescription" class="form-control task-input" placeholder="Task"></textarea>
+            <textarea id="row10" class="form-control task-input" placeholder="Enter Task Here"></textarea>
         </div>
         <div class="col button">
-          <button type="button" class="btn btn-secondary"><span class="oi oi-box"></span></button>
+          <button type="button" class="btn btn-secondary" data-hour=10><span class="oi oi-box"></span></button>
         </div>
       </div>
       <div class="row">
@@ -53,10 +54,10 @@
         </div>
         <div class="col-6 middle task-drop task-drag">
           <!-- <input class="form-control" type="text" placeholder="Default input"> -->
-          <textarea id="modalTaskDescription" class="form-control task-input" placeholder="Task"></textarea>
+          <textarea id="row11" class="form-control task-input" placeholder="Enter Task Here"></textarea>
         </div>
         <div class="col button">
-          <button type="button" class="btn btn-secondary"><span class="oi oi-box"></span></button>
+          <button type="button" class="btn btn-secondary" data-hour=11><span class="oi oi-box"></span></button>
         </div>
       </div>
       <div class="row">
@@ -64,10 +65,10 @@
           12p.m.
         </div>
         <div class="col-6 middle">
-          <textarea id="modalTaskDescription" class="form-control task-input" placeholder="Task"></textarea>
+          <textarea id="row12" class="form-control task-input" placeholder="Enter Task Here"></textarea>
         </div>
         <div class="col button">
-          <button type="button" class="btn btn-secondary"><span class="oi oi-box"></span></button>
+          <button type="button" class="btn btn-secondary" data-hour=12><span class="oi oi-box"></span></button>
         </div>
       </div>
       <div class="row">
@@ -75,10 +76,10 @@
           1p.m.
         </div>
         <div class="col-6 middle">
-          <textarea id="modalTaskDescription" class="form-control task-input" placeholder="Task"></textarea>
+          <textarea id="row1" class="form-control task-input" placeholder="Enter Task Here"></textarea>
         </div>
         <div class="col button">
-          <button type="button" class="btn btn-secondary"><span class="oi oi-box"></span></button>
+          <button type="button" class="btn btn-secondary" data-hour=1><span class="oi oi-box"></span></button>
         </div>
       </div>
       <div class="row">
@@ -86,10 +87,10 @@
           2p.m.
         </div>
         <div class="col-6 middle">
-          <textarea id="modalTaskDescription" class="form-control task-input" placeholder="Task"></textarea>
+          <textarea id="row2" class="form-control task-input" placeholder="Enter Task Here"></textarea>
         </div>
         <div class="col button">
-          <button type="button" class="btn btn-secondary"><span class="oi oi-box"></span></button>
+          <button type="button" class="btn btn-secondary" data-hour=2><span class="oi oi-box"></span></button>
         </div>
       </div>
       <div class="row">
@@ -97,10 +98,10 @@
           3p.m.
         </div>
         <div class="col-6 middle">
-          <textarea id="modalTaskDescription" class="form-control task-input" placeholder="Task"></textarea>
+          <textarea id="row3" class="form-control task-input" placeholder="Enter Task Here"></textarea>
         </div>
         <div class="col button">
-          <button type="button" class="btn btn-secondary"><span class="oi oi-box"></span></button>
+          <button type="button" class="btn btn-secondary" data-hour=3><span class="oi oi-box"></span></button>
         </div>
       </div>
       <div class="row">
@@ -108,10 +109,10 @@
           4p.m.
         </div>
         <div class="col-6 middle">
-          <textarea id="modalTaskDescription" class="form-control task-input" placeholder="Task"></textarea>
+          <textarea id="row4" class="form-control task-input" placeholder="Enter Task Here"></textarea>
         </div>
         <div class="col button">
-          <button type="button" class="btn btn-secondary"><span class="oi oi-box"></span></button>
+          <button type="button" class="btn btn-secondary" data-hour=4><span class="oi oi-box"></span></button>
         </div>
       </div>
       <div class="row">
@@ -119,14 +120,15 @@
           5p.m.
         </div>
         <div class="col-6 middle">
-          <textarea id="modalTaskDescription" class="form-control task-input" placeholder="Enter Task Here"></textarea>
+          <textarea id="row5" class="form-control task-input" placeholder="Enter Task Here"></textarea>
         </div>
         <div class="col button">
-          <button type="button" class="btn btn-secondary"><span class="oi oi-box"></span></button>
+          <button type="button" class="btn btn-secondary" data-hour=5><span class="oi oi-box"></span></button>
         </div>
       </div>
     </div>
   </main>
+  
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
