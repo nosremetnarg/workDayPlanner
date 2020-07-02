@@ -12,18 +12,32 @@
 // $('.lead')("change", "<p>");
 const currentDay = document.getElementById('currentDay');
 
-// task was clicked
-$('.middle').on('click', function() {
-    console.log(this);
+// task textarea  clicked
+$('.task-input').on('click', function() {
     var text = $(this)
     .text()
     .trim();
-    console.log(this)
+    console.log(this + "text area")
+    var textInput = $("<textarea>")
+    .addClass("form-control")
+    .val(text);
+    $(this).replaceWith(textInput);
+    textInput.trigger("focus");
+    
+});
+// save button clicked
+$('.button').on('click', function() {
+    var text = $(this)
+    .text()
+    .trim();
+    console.log(this + "button")
     var textInput = $("<textarea>")
     .addClass("form-control")
     .val(text);
     
 });
+
+// draggable
 $(function() {
     $(".middle").draggable();
     $(".middle").droppable({
@@ -34,6 +48,8 @@ $(function() {
         }
     })
 });
+
+// updateTime
 function updateTime () {
     const now = moment();
     const humanReadable = now.local().format("dddd, MMMM Do YYYY, h:mm A");
