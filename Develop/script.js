@@ -22,6 +22,17 @@ $('.middle').on('click', function() {
     var textInput = $("<textarea>")
     .addClass("form-control")
     .val(text);
+    
+});
+$(function() {
+    $(".middle").draggable();
+    $(".middle").droppable({
+        drop: function(event, ui) {
+            $(this)
+            .addClass("ui-state-highlight")
+            .find("")
+        }
+    })
 });
 function updateTime () {
     const now = moment();
@@ -29,5 +40,5 @@ function updateTime () {
     console.log(humanReadable);
     currentDay.textContent = humanReadable;
 }
-setInterval (updateTime, 1000);
+setInterval (updateTime, 60000);
 updateTime();
