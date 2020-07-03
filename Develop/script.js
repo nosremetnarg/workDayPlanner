@@ -52,15 +52,12 @@ const currentHour = document.getElementById('currentHour');
 // });
 // save button clicked
 $('.btn').on('click', function () {
-    var userInput = $(this).siblings('input')
-    .text()
-    .trim();
+    var userInput = $(this).siblings("input").text().trim();
     console.log($(this).siblings("input").attr("id"));
 
     var hour = $(this).siblings("input").attr("id");
     localStorage.setItem(hour, userInput);
-
-});
+})
 // get localStorage
 $("#row9").val(localStorage.getItem("row9"));
 $("#row10").val(localStorage.getItem("row10"));
@@ -84,18 +81,18 @@ $("#row5").val(localStorage.getItem("row5"));
 //     })
 // });
 for (var i = 1; i <= 12; i++) {
-    var inputTime = $("#" + i + "Row").attr("date-time");
+    var inputTime = $("#" + i + "Row").attr("data-time");
     var inputTimeInt = parseInt(inputTime);
     console.log(currentTimeInt);
 
     if (currentTimeInt === inputTimeInt) {
-        $("#" + "Row").addClass("present");
+        $("#" + i + "Row").addClass("present");
     }
 
-    if (currentTime > inputTimeInt) {
+    if (currentTimeInt > inputTimeInt) {
         $("#" + i + "Row").addClass("past");
     }
-    if (currentTime < inputTimeInt) {
+    if (currentTimeInt > inputTimeInt) {
         $("#" + i + "Row").addClass("future");
     }
 }
