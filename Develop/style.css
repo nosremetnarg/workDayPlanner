@@ -80,7 +80,7 @@ header  {
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #a3a8a8;
   color: white;
 }
 
@@ -112,10 +112,9 @@ header  {
 } */
 .btn, .taskBtn {
   background-color: rgba(39, 212, 105, 0.616);
-  color: black;
+  /* color: black;  */
   border: none;
-  background-image: linear-gradient(180deg, #22f178 0%, #1baf0d 100%);
-  transition: all .5s ease-in-out;
+
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -124,3 +123,12 @@ header  {
   border-bottom-right-radius: 10px;
   /* box-shadow: 1px 1px; */
 }
+
+.btn:hover, .taskBtn:hover {
+  background-image: linear-gradient(180deg, #22f178 0%, #1baf0d 100%);
+  transition: all 0.5s ease-in-out;
+}
+/* .taskBtn::after {
+  color: black 0%, white 100%;
+  transition: all 0.5s ease-in-out;
+} */
