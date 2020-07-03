@@ -97,12 +97,12 @@ header  {
   transition: all .3s ease-in-out;
 } */
 .middle {
-  background-color: rgba(183, 183, 183, 0.75);
+  /* background-color: rgba(183, 183, 183, 0.75); */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* .button {
+/* . {
   background-color: rgba(39, 212, 105, 1.0);
   display: flex;
   justify-content: center;
@@ -110,7 +110,7 @@ header  {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 } */
-.btn, .taskBtn, .button{
+.btn, .taskBtn {
   background-color: rgba(39, 212, 105, 0.616);
   color: black;
   border: none;

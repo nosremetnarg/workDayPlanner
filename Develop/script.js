@@ -14,9 +14,7 @@ var currentTime = moment().format("dddd MMMM Do YYYY, h:mm a");
 var currentTimeInt = moment().hour();
 
 var saveBtn = $('.btn');
-
-
-
+$("#currentDay").text(currentTime);
 
 // input data for each hour
 $("#row9").attr("data-time", moment("9:00am", "h:mm a").format("HH"));
@@ -81,19 +79,22 @@ $("#row5").val(localStorage.getItem("row5"));
 //     })
 // });
 for (var i = 1; i <= 12; i++) {
-    var inputTime = $("#" + "Row" + i).attr("data-time");
+    var inputTime = $("#" + "row" + i).attr("data-time");
     var inputTimeInt = parseInt(inputTime);
     console.log(currentTimeInt);
 
     if (currentTimeInt === inputTimeInt) {
-        $("#" + "Row" + i).addClass("present");
+        $("#" + "row" + i).removeClass("");
+        $("#" + "row" + i).addClass("present");
     }
 
     if (currentTimeInt > inputTimeInt) {
-        $("#" + "Row" + i).addClass("past");
+        $("#" + "row" + i).removeClass("");
+        $("#" + "row" + i).addClass("past");
     }
     if (currentTimeInt > inputTimeInt) {
-        $("#" + "Row" + i).addClass("future");
+        $("#" + "row" + i).removeClass("");
+        $("#" + "row" + i).addClass("future");
     }
 }
 
