@@ -48,11 +48,10 @@ const currentHour = document.getElementById('currentHour');
 //     .val(text);
 //     $(this).replaceWith(textInput);
 //     textInput.trigger("focus");
-
 // });
 // save button clicked
 $('.btn').on('click', function () {
-    var userInput = $(this).siblings("input").text().trim();
+    var userInput = $(this).siblings("input").val().trim();
     console.log($(this).siblings("input").attr("id"));
 
     var hour = $(this).siblings("input").attr("id");
@@ -81,19 +80,19 @@ $("#row5").val(localStorage.getItem("row5"));
 //     })
 // });
 for (var i = 1; i <= 12; i++) {
-    var inputTime = $("#" + i + "Row").attr("data-time");
+    var inputTime = $("#" + "Row" + i).attr("data-time");
     var inputTimeInt = parseInt(inputTime);
     console.log(currentTimeInt);
 
     if (currentTimeInt === inputTimeInt) {
-        $("#" + i + "Row").addClass("present");
+        $("#" + "Row" + i).addClass("present");
     }
 
     if (currentTimeInt > inputTimeInt) {
-        $("#" + i + "Row").addClass("past");
+        $("#" + "Row" + i).addClass("past");
     }
     if (currentTimeInt > inputTimeInt) {
-        $("#" + i + "Row").addClass("future");
+        $("#" + "Row" + i).addClass("future");
     }
 }
 
