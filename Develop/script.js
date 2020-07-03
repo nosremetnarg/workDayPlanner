@@ -53,6 +53,7 @@ const currentHour = document.getElementById('currentHour');
 $('.btn').on('click', function () {
     var userInput = $(this).siblings("input").val().trim();
     console.log($(this).siblings("input").attr("id"));
+    console.log(localStorage);
 
     var hour = $(this).siblings("input").attr("id");
     localStorage.setItem(hour, userInput);
@@ -114,3 +115,5 @@ function updateHour() {
 }
 setInterval(updateHour, 3600000);
 updateHour();
+
+console.log(localStorage);
