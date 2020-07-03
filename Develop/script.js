@@ -30,24 +30,6 @@ $("#row5").attr("data-time", moment("5:00pm", "h:mm a").format("HH"));
 const currentDay = document.getElementById('currentDay');
 const currentHour = document.getElementById('currentHour');
 
-// var auditTime = function(updateTime) {
-//     var time = $(updateTime).find("p").text().trim();
-//     // convert moment object at 5:00pm
-//     var workTime = moment(date, "L").set("hour")
-// }
-// task textarea  clicked
-// $('.task-input').on('click', function() {
-//     var text = $(this)
-//     .text()
-//     .trim();
-//     console.log(this + "text area")
-//     var textInput = $("<textarea>")
-//     .addClass("form-control")
-//     .val(text);
-//     $(this).replaceWith(textInput);
-//     textInput.trigger("focus");
-// });
-// save button clicked
 $('.btn').on('click', function () {
     var userInput = $(this).siblings("input").val().trim();
     console.log($(this).siblings("input").attr("id"));
@@ -67,17 +49,6 @@ $("#row3").val(localStorage.getItem("row3"));
 $("#row4").val(localStorage.getItem("row4"));
 $("#row5").val(localStorage.getItem("row5"));
 
-// // draggable DO NOT NEED DRAGGABLE ATTR IN THIS CHALLENGE
-// $(function() {
-//     $(".middle").draggable();
-//     $(".middle").droppable({
-//         drop: function(event, ui) {
-//             $(this)
-//             .addClass("ui-state-highlight")
-//             .find("")
-//         }
-//     })
-// });
 for (var i = 1; i <= 12; i++) {
     var inputTime = $("#" + "row" + i).attr("data-time");
     var inputTimeInt = parseInt(inputTime);
