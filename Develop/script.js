@@ -66,8 +66,15 @@ for (var i = 1; i <= 12; i++) {
     if (currentTimeInt > inputTimeInt) {
         $("#" + "row" + i).removeClass("");
         $("#" + "row" + i).addClass("future");
+        // document.getElementById('row' + i).classList.add("future");
     }
 }
+$('input').on('input', function () {
+    console.log($(this).val());
+    if ($(this).val() === "") {
+        localStorage.setItem($(this).attr("id"), "");
+    }
+}) 
 
 // updateTime
 function updateTime() {
@@ -89,3 +96,4 @@ setInterval(updateHour, 3600000);
 updateHour();
 
 console.log(localStorage);
+console.log();
